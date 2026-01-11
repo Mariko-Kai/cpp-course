@@ -1,0 +1,79 @@
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+# Common build directories
+/build/
+/out/
+/cmake-build-*/
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+*.pdb # Debugger files
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug information files
+*.dwo
+*.elf
+*.map
+
+# Editor/IDE-specific files (e.g., Visual Studio, CLion, VS Code)
+.idea/
+.vscode/
+[Dd]ebug/
+[Rr]elease/
+build/
+Generated\ Files/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.config.untracked
+
+# Temporary and backup files
+*~
+*.bak
+*.swp
+
+# Repo specific
+.DS_Store
+a.out
+app

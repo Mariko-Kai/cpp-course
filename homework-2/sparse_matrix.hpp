@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <vector>
 #include <map>
+#include <stdexcept>
+#include <string>
 
 template <typename T>
 class SparseMatrixNew;
@@ -40,6 +42,7 @@ class SparseMatrixNew
 {
     T default_value;
     std::map<std::vector<uint64_t>, T> values;
+    size_t max_arity = 0;
 
 public:
     SparseMatrixNew(T default_value) : default_value(default_value) {}
@@ -55,6 +58,18 @@ public:
 
     void addValue(T value, std::vector<uint64_t> coords)
     {
+        if (max_arity > 0)
+        {
+            if (coords.size() != max_arity)
+                throw std::invalid_argument(
+                    "Invalid element arity: expected " + std::to_string(max_arity) +
+                    ", got " + std::to_string(coords.size()));
+        }
+        else if (max_arity == 0)
+        {
+            max_arity = coords.size();
+        }
+
         if (value == default_value)
         {
             if (values.find(coords) != values.end())

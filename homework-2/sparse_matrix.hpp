@@ -16,7 +16,7 @@ template <typename T>
 class MatrixN_1DimProxy
 {
     SparseMatrixNew<T> &matrix;
-    std::unique_ptr<std::vector<uint64_t>> coords_ptr = std::make_unique<std::vector<uint64_t>>;
+    std::unique_ptr<std::vector<uint64_t>> coords_ptr = std::make_unique<std::vector<uint64_t>>();
 
 public:
     MatrixN_1DimProxy(SparseMatrixNew<T> &matrix, std::unique_ptr<std::vector<uint64_t>> coords) : matrix(matrix), coords_ptr(std::move(coords)) {}
